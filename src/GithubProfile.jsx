@@ -77,7 +77,7 @@ export default function GithubProfile() {
           GitHub Profile Finder
         </h1>
 
-        {/* SEARCH */}
+      
         <div className="flex gap-3 justify-center mb-6">
           <input
             className="px-4 py-3 rounded-lg bg-[#111827] text-white
@@ -105,7 +105,7 @@ export default function GithubProfile() {
 
         {profile && (
           <>
-            {/* PROFILE CARD */}
+          
             <div className="bg-[#111827] border border-gray-800 rounded-xl
                             p-6 mt-10 shadow-xl flex gap-6 items-center">
               <img
@@ -121,8 +121,8 @@ export default function GithubProfile() {
                 </p>
 
                 <div className="flex gap-6 mt-3 text-gray-300">
-                  <span>👥 {profile.followers} Followers</span>
-                  <span>📦 {profile.public_repos} Repos</span>
+                  <span> {profile.followers} Followers</span>
+                  <span> {profile.public_repos} Repos</span>
                 </div>
 
                 <a
@@ -136,7 +136,7 @@ export default function GithubProfile() {
               </div>
             </div>
 
-            {/* CONTRIBUTION HEATMAP */}
+           
             <div className="bg-[#111827] border border-gray-800 rounded-xl
                             p-6 mt-10 shadow-xl">
               <h3 className="text-xl font-semibold mb-4">
@@ -161,7 +161,7 @@ export default function GithubProfile() {
               />
             </div>
 
-            {/* REPO SEARCH */}
+         
             <div className="mt-10">
               <input
                 className="px-4 py-2 rounded-lg bg-[#111827] text-white
@@ -175,7 +175,7 @@ export default function GithubProfile() {
               />
             </div>
 
-            {/* REPOSITORIES */}
+          
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               {displayedRepos.map((repo) => (
                 <div
@@ -198,15 +198,15 @@ export default function GithubProfile() {
                   </p>
 
                   <div className="flex gap-5 text-sm text-gray-300 mt-4">
-                    <span>⭐ {repo.stargazers_count}</span>
-                    <span>🍴 {repo.forks_count}</span>
-                    <span>📝 {repo.language || "N/A"}</span>
+                    <span>stars:- {repo.stargazers_count}</span>
+                    <span>fork:- {repo.forks_count}</span>
+                    <span>languages:- {repo.language || "N/A"}</span>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* PAGINATION */}
+          
             {totalPages > 1 && (
               <div className="flex justify-center items-center gap-6 mt-10">
                 <button
